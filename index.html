@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Tech Blog: PowerShell, Bash, Python</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Fira+Code&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4CAF50;
+            --secondary-color: #2C3E50;
+            --background-color: #F0F4F8;
+            --text-color: #333;
+            --code-bg-color: #F1F1F1;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+        header {
+            background: var(--primary-color);
+            color: #fff;
+            text-align: center;
+            padding: 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        nav {
+            background: var(--secondary-color);
+            padding: 1rem;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 400;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+        .container {
+            display: flex;
+            flex: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        main {
+            flex: 3;
+            padding: 2rem;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        article {
+            margin-bottom: 2rem;
+        }
+        article h2 {
+            color: var(--primary-color);
+        }
+        aside {
+            flex: 1;
+            padding: 2rem;
+            margin-left: 2rem;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        footer {
+            background: var(--secondary-color);
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            margin-top: auto;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+        code {
+            font-family: 'Fira Code', monospace;
+            background-color: var(--code-bg-color);
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+        .post-form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-top: 2rem;
+        }
+        .post-form input, .post-form textarea, .post-form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .post-form button {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .post-form button:hover {
+            background-color: #45a049;
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            aside {
+                margin-left: 0;
+                margin-top: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Tech Blog: PowerShell, Bash, Python</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">ホーム</a></li>
+            <li><a href="#">PowerShell</a></li>
+            <li><a href="#">Bash</a></li>
+            <li><a href="#">Python</a></li>
+            <li><a href="#">管理パネル</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <main>
+            <article>
+                <h2>Pythonで自動化スクリプトを作成する方法</h2>
+                <p>投稿日: 2024年7月27日</p>
+                <p>Pythonを使用して日常のタスクを自動化する方法を紹介します。以下は簡単な例です：</p>
+                <code>
+import os
+
+def organize_files(directory):
+    for filename in os.listdir(directory):
+        name, extension = os.path.splitext(filename)
+        extension = extension[1:]
+        
+        if os.path.exists(os.path.join(directory, extension)):
+            os.rename(os.path.join(directory, filename), os.path.join(directory, extension, filename))
+        else:
+            os.makedirs(os.path.join(directory, extension))
+            os.rename(os.path.join(directory, filename), os.path.join(directory, extension, filename))
+
+organize_files("/path/to/your/directory")
+                </code>
+                <p>このスクリプトは指定されたディレクトリ内のファイルを拡張子ごとに整理します。</p>
+                <a href="#" class="button">続きを読む</a>
+            </article>
+            
+            <div class="post-form">
+                <h3>新規投稿</h3>
+                <form>
+                    <input type="text" placeholder="タイトル" required>
+                    <select required>
+                        <option value="">カテゴリーを選択</option>
+                        <option value="powershell">PowerShell</option>
+                        <option value="bash">Bash</option>
+                        <option value="python">Python</option>
+                    </select>
+                    <textarea placeholder="本文" rows="6" required></textarea>
+                    <button type="submit">投稿</button>
+                </form>
+            </div>
+        </main>
+        <aside>
+            <h3>プロフィール</h3>
+            <p>PowerShell、Bash、Pythonを愛用するエンジニアです。自動化とスクリプティングの魅力を日々のブログで共有しています。</p>
+            <h3>カテゴリー</h3>
+            <ul>
+                <li><a href="#">PowerShell</a></li>
+                <li><a href="#">Bash</a></li>
+                <li><a href="#">Python</a></li>
+                <li><a href="#">自動化テクニック</a></li>
+            </ul>
+        </aside>
+    </div>
+    <footer>
+        <p>&copy; 2024 My Tech Blog: PowerShell, Bash, Python. All rights reserved.</p>
+    </footer>
+</body>
+</html>
