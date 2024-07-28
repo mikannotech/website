@@ -29,6 +29,7 @@ title: "備忘録"
 description: "備忘録"
 name: "あなたの名前"
 url: "https://mikannotech.github.io"
+baseurl: "/website" # この行を追加してベースURLを設定
 
 defaults:
   - scope:
@@ -63,15 +64,14 @@ jekyll-archives:
 footer:
   links:
     - title: "Home"
-      url: "/"
+      url: "/website/" # ベースURLを考慮
     - title: "Categories"
-      url: "/categories/"
+      url: "/website/categories/" # ベースURLを考慮
     - title: "Tags"
-      url: "/tags/"
+      url: "/website/tags/" # ベースURLを考慮
     - title: "About"
-      url: "/about/"
-  # feedリンクを削除
-  feed: false
+      url: "/website/about/" # ベースURLを考慮
+  feed: false # feedリンクを削除
 
 exclude:
   - .sass-cache/
@@ -84,6 +84,7 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+
 
 
 
