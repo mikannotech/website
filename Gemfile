@@ -31,3 +31,6 @@ gem "http_parser.rb", "~> 0.6.0", platforms: [:jruby]
 gem 'webrick'
 gem 'csv'
 gem 'faraday-retry'
+
+# 記事テンプレプラグイン
+gem 'jekyll-compose', group: [:jekyll_plugins]
