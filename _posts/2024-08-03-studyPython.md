@@ -1,6 +1,4 @@
-
 ---
-
 title: "Python 備忘録"
 tags:
   - Python
