@@ -1,10 +1,10 @@
 ---
-title: "Python 備忘録 条件分岐"
-tags:
-  - Python
+layout: post
+title: Python 備忘録 変数
+date: 2024-08-04
+category: プログラミング
+tags: [Python, 基礎]
 ---
-
-
 
 ---
 
