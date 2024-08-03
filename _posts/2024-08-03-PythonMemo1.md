@@ -1,5 +1,5 @@
 ---
-title: "Python 備忘録①"
+title: "Python 備忘録 変数"
 tags:
   - Python
 ---
