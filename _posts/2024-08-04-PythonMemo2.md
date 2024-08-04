@@ -1,9 +1,9 @@
 ---
-layout: post
-title: Python 備忘録 変数
-date: 2024-08-04
-category: プログラミング
-tags: [Python, 基礎]
+title: "Python 備忘録 論理・比較演算と条件分岐"
+categories:
+  - プログラミング
+tags:
+  - Python
 ---
 
 **論理・比較演算と条件分岐の基礎**

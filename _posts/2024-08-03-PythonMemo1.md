@@ -1,5 +1,7 @@
 ---
 title: "Python 備忘録 変数"
+categories:
+  - プログラミング
 tags:
   - Python
 ---
