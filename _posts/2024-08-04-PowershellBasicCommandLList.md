@@ -11,7 +11,6 @@ tags:
 
 ```powershell
 Get-Command -Name *process*
-
 ```
 
 ## 2. `Get-Help`
@@ -20,7 +19,6 @@ Get-Command -Name *process*
 
 ```powershell
 Get-Help Get-Process
-
 ```
 
 ## 3. `Get-Process`
@@ -29,7 +27,6 @@ Get-Help Get-Process
 
 ```powershell
 Get-Process | Where-Object { $_.CPU -gt 10 }
-
 ```
 
 ## 4. `Get-Service`
@@ -38,7 +35,6 @@ Get-Process | Where-Object { $_.CPU -gt 10 }
 
 ```powershell
 Get-Service | Where-Object { $_.Status -eq "Running" }
-
 ```
 
 ## 5. `Get-ChildItem` (別名: `dir`, `ls`)
@@ -47,7 +43,6 @@ Get-Service | Where-Object { $_.Status -eq "Running" }
 
 ```powershell
 Get-ChildItem -Path C:\\ -Recurse -Filter *.txt
-
 ```
 
 ## 6. `Set-Location` (別名: `cd`)
@@ -56,7 +51,6 @@ Get-ChildItem -Path C:\\ -Recurse -Filter *.txt
 
 ```powershell
 Set-Location C:\\Users\\YourUsername\\Documents
-
 ```
 
 ## 7. `New-Item` (別名: `mkdir`)
@@ -65,7 +59,6 @@ Set-Location C:\\Users\\YourUsername\\Documents
 
 ```powershell
 New-Item -Path "C:\\Temp" -ItemType Directory
-
 ```
 
 ## 8. `Copy-Item` (別名: `cp`)
@@ -74,7 +67,6 @@ New-Item -Path "C:\\Temp" -ItemType Directory
 
 ```powershell
 Copy-Item "C:\\source\\file.txt" -Destination "C:\\destination"
-
 ```
 
 ## 9. `Move-Item` (別名: `mv`)
@@ -83,7 +75,6 @@ Copy-Item "C:\\source\\file.txt" -Destination "C:\\destination"
 
 ```powershell
 Move-Item "C:\\OldFolder\\*" -Destination "C:\\NewFolder"
-
 ```
 
 ## 10. `Remove-Item` (別名: `rm`, `del`)
@@ -92,7 +83,6 @@ Move-Item "C:\\OldFolder\\*" -Destination "C:\\NewFolder"
 
 ```powershell
 Remove-Item "C:\\Temp\\*.tmp" -Force
-
 ```
 
 ## 11. `Write-Output` (別名: `echo`)
@@ -101,7 +91,6 @@ Remove-Item "C:\\Temp\\*.tmp" -Force
 
 ```powershell
 Write-Output "Hello, PowerShell!"
-
 ```
 
 ## 12. `Select-Object`
@@ -110,7 +99,6 @@ Write-Output "Hello, PowerShell!"
 
 ```powershell
 Get-Process | Select-Object Name, CPU, Memory
-
 ```
 
 ## 13. `Where-Object`
@@ -119,7 +107,6 @@ Get-Process | Select-Object Name, CPU, Memory
 
 ```powershell
 Get-Service | Where-Object { $_.Status -eq "Running" }
-
 ```
 
 ## 14. `Sort-Object`
@@ -128,7 +115,6 @@ Get-Service | Where-Object { $_.Status -eq "Running" }
 
 ```powershell
 Get-ChildItem | Sort-Object Length -Descending
-
 ```
 
 ## 15. `Invoke-WebRequest`
@@ -137,7 +123,6 @@ Get-ChildItem | Sort-Object Length -Descending
 
 ```powershell
 Invoke-WebRequest -Uri "<https://example.com>" | Select-Object -ExpandProperty Content
-
 ```
 
 ## 16. `Format-List`
@@ -146,7 +131,6 @@ Invoke-WebRequest -Uri "<https://example.com>" | Select-Object -ExpandProperty C
 
 ```powershell
 Get-Process | Format-List Name, Id, CPU
-
 ```
 
 ## 17. `Out-File`
@@ -155,7 +139,6 @@ Get-Process | Format-List Name, Id, CPU
 
 ```powershell
 Get-Process | Out-File C:\\processes.txt
-
 ```
 
 ## 18. `Import-Csv` / `Export-Csv`
@@ -164,7 +147,6 @@ Get-Process | Out-File C:\\processes.txt
 
 ```powershell
 Import-Csv C:\\data.csv | Where-Object { $_.Age -gt 30 } | Export-Csv C:\\filtered_data.csv
-
 ```
 
 ## 19. `Measure-Object`
@@ -173,7 +155,6 @@ Import-Csv C:\\data.csv | Where-Object { $_.Age -gt 30 } | Export-Csv C:\\filter
 
 ```powershell
 Get-ChildItem | Measure-Object Length -Sum -Average -Maximum -Minimum
-
 ```
 
 ## 20. `Compare-Object`
@@ -182,6 +163,7 @@ Get-ChildItem | Measure-Object Length -Sum -Average -Maximum -Minimum
 
 ```powershell
 Compare-Object (Get-Content file1.txt) (Get-Content file2.txt)
+```
 
+また、Get-Help -online でコマンドレットの公式ドキュメントに飛べる。
 
-また、Get-Helpコマンドを使用するとコマンドレットの使い方を調べられる。
