@@ -6,7 +6,8 @@ tags:
   - Python
 ---
 
-![Programming Concepts Overview](/assets/images/programming_concepts_overview.png)
+![Programming Concepts Overview]({{ site.baseurl }}/assets/images/programming_concepts_overview.png)
+
 
 
 # プログラミングの基本概念
