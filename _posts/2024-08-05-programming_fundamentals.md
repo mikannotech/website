@@ -6,9 +6,8 @@ tags:
   - Python
 ---
 
-こちらが番号を削除したマークダウン形式の説明です。
+![Programming Concepts Overview](/assets/images/programming_concepts_overview.png)
 
----
 
 # プログラミングの基本概念
 
