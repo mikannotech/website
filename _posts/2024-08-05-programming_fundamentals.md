@@ -9,9 +9,6 @@ tags:
 ![Programming Concepts Overview]({{ site.baseurl }}/assets/images/programming_concepts_overview.png)
 
 
-
-# プログラミングの基本概念
-
 ## ライブラリ/フレームワーク
 
 **ライブラリ**や**フレームワーク**は、よく使う機能がまとめられた「便利なツール」。
