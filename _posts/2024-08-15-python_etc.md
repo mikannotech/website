@@ -1,5 +1,5 @@
 ---
-title: "Python　～色々～"
+title: "Python　～etc～"
 categories:
   - プログラミング
 tags:
